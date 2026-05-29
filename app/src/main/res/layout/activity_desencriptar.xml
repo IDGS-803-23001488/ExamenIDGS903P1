@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DesencriptarActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_unlock_key" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="DESENCRIPTAR MENSAJE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Spinner
+        android:id="@+id/spMensajes"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/edtDesplazamiento"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Numero para desencriptar"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@id/spMensajes"
+        app:layout_constraintTop_toBottomOf="@id/spMensajes" />
+
+    <Button
+        android:id="@+id/btnDesencriptar"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="28dp"
+        android:text="Desencriptar"
+        app:layout_constraintStart_toStartOf="@id/edtDesplazamiento"
+        app:layout_constraintTop_toBottomOf="@id/edtDesplazamiento" />
+
+    <TextView
+        android:id="@+id/txtEncriptado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:text="Mensaje encriptado:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/btnDesencriptar"
+        app:layout_constraintTop_toBottomOf="@id/btnDesencriptar" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:text="Mensaje desencriptado:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/txtEncriptado"
+        app:layout_constraintTop_toBottomOf="@id/txtEncriptado" />
+
+    <TextView
+        android:id="@+id/txtComparacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:text="Comparacion:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/txtResultado"
+        app:layout_constraintTop_toBottomOf="@id/txtResultado" />
+
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="22dp"
+        android:text="Regresar"
+        app:layout_constraintStart_toStartOf="@id/txtComparacion"
+        app:layout_constraintTop_toBottomOf="@id/txtComparacion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
