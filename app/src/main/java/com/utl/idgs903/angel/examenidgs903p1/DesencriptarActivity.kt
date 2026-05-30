@@ -82,9 +82,9 @@ class DesencriptarActivity : AppCompatActivity() {
         val mensaje = mensajes[spMensajes.selectedItemPosition]
         val desencriptado = CesarArchivo.desencriptar(mensaje.encriptado, desplazamiento)
         val correcto = if (desencriptado == mensaje.original) {
-            "Correcto, coincide con el mensaje original"
+            "Los mensajes coinciden"
         } else {
-            "No coincide con el mensaje original"
+            "No coincide el mensaje"
         }
 
         txtEncriptado.text = "Mensaje encriptado: ${mensaje.encriptado}"
